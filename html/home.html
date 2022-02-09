@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Sale Quotation</title>
+  
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .row
+      {
+          padding-bottom:2px;
+      }
+      .row-empty {
+          height:41px;
+      }
+        .table-responsive {
+            display: block;
+            height: 300px;
+            overflow: auto
+        }
+        thead tr:nth-child(1) th {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        header
+        {
+            position:sticky;
+            top:0;
+            z-index:11;
+        }
+        footer
+        {
+            position:sticky;
+            bottom:0;
+        }
+    </style>
+
+    
+  </head>
+  <body>
+<form>
+    <header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
+        <div class="container-fluid d-flex align-items-center">
+            <h1 class="d-flex align-items-center fs-4 text-white mb-0">
+                <a href="#" class="navbar-brand d-flex text-white align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
+                    </svg>
+                    <strong>&#160; Sale Quotation</strong>
+                </a>
+            </h1>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="container">
+            <br />
+            <div class="row">
+                <div class="col-1">
+                    <label class="col-form-label-sm">Customer</label>
+                </div>
+                <div class="col-1" style="text-align:right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="Customer" disabled />
+                </div>
+                <div class="col-4">
+                </div>
+                <div class="col-1">
+                    <label class="col-form-label-sm">No.</label>
+                </div>
+                <div class="col-1">
+                    <input type="text" class="form-control form-control-sm" placeholder="Primary" disabled />
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="Number" disabled />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <label class="col-form-label-sm">Name</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="Name" disabled />
+                </div>
+                <div class="col-4">
+                </div>
+                <div class="col-2">
+                    <label class="col-form-label-sm">Status</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="Status" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <label class="col-form-label-sm">Contact Person</label>
+                </div>
+                <div class="col-2">
+                    <select class="form-select form-select-sm">
+                    </select>
+                </div>
+                <div class="col-4">
+                </div>
+                <div class="col-2">
+                    <label class="col-form-label-sm">Posting Date</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="Posting Date" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <label class="col-form-label-sm">Customer Ref. No.</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="Customer Ref. No." />
+                </div>
+                <div class="col-4">
+                </div>
+                <div class="col-2">
+                    <label class="col-form-label-sm">Valid Until</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="Valid Until" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <select class="form-select form-select-sm" aria-label="Local currency">
+                        <option selected>Local Currency</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                </div>
+                <div class="col-2">
+                    <label class="col-form-label-sm">Document Date</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="Document Date" />
+                </div>
+            </div>
+
+            <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-content-tab" data-bs-toggle="tab" data-bs-target="#nav-content" type="button" role="tab" aria-controls="nav-content" aria-selected="true">Content</button>
+                <button class="nav-link" id="nav-logistics-tab" data-bs-toggle="tab" data-bs-target="#nav-logistics" type="button" role="tab" aria-controls="nav-logistics" aria-selected="false">Logistics</button>
+                <button class="nav-link" id="nav-accounting-tab" data-bs-toggle="tab" data-bs-target="#nav-accounting" type="button" role="tab" aria-controls="nav-accounting" aria-selected="false">Accounting</button>
+                <button class="nav-link" id="nav-attachments-tab" data-bs-toggle="tab" data-bs-target="#nav-attachments" type="button" role="tab" aria-controls="nav-attachments" aria-selected="false">Attachments</button>
+            </div>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade active show" id="nav-content" role="tabpanel" aria-labelledby="nav-content-tab">
+                    <div class="row">
+                        <div class="col-2">
+                            <label class="col-form-label-sm">Item/Service type</label>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control form-control-sm" placeholder="Item" disabled />
+                                <button type="button" class="input-group-text" target="popup" onclick="window.open('Items.html', 'List','width=1000,height=500')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                                    </svg>
+                                    </button>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                        </div>
+                        <div class="col-2">
+                            <label class="col-form-label-sm">Summary Type</label>
+                        </div>
+                        <div class="col-2">
+                            <select class="form-select form-select-sm" aria-label="Summary">
+                                <option selected>No summary</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class="text-nowrap">
+                                <tr class="row-table">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Item No.</th>
+                                    <th scope="col">Item Description</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Unit Price</th>
+                                    <th scope="col">Whse</th>
+                                    <th scope="col">Qty in Whse</th>
+                                    <th scope="col">Total(LC)</th>
+                                    <th scope="col">Tax Code</th>
+                                    <th scope="col">Del Date</th>
+                                    <th scope="col">Discount %</th>
+                                    <th scope="col">Project</th>
+                                    <th scope="col">UoM Code</th>
+                                    <th scope="col">COGS Production Cost</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="row-empty">
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="row-empty">
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="row-empty">
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="row-empty">
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="row-empty">
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="row-empty">
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="row-empty">
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="row-empty">
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <!-- Row has data -->
+                                <!--<tr>
+    <th scope="row"></th>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    <td>Cell</td>
+    </tr>-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-logistics" role="tabpanel" aria-labelledby="nav-logistics-tab">
+                    <div class="row">
+                        <div class="col-2">
+                            <label class="col-form-label-sm">Ship to</label>
+                            <select class="form-select form-select-sm" aria-label="Summary">
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <textarea style="resize:none"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-accounting" role="tabpanel" aria-labelledby="nav-accounting-tab">
+                    <p><strong>This is some placeholder content the Contact tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+                </div>
+                <div class="tab-pane fade" id="nav-attachments" role="tabpanel" aria-labelledby="nav-attachments-tab">
+                    <p><strong>This is some placeholder content the Contact tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <label class="col-form-label-sm">Sale Employee</label>
+                </div>
+                <div class="col-2">
+                    <div class="input-group input-group-sm">
+                        <select class="form-select form-select-sm" aria-label="Sale Employee">
+                            <option selected>-No Sale Employee-</option>
+                        </select>
+                        <button type="button" class="input-group-text" target="popup" onclick="window.open('Customer.html', 'List','width=1000,height=500')" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                            </svg>
+                        </button>
+                    </div>
+                    
+                </div>
+                <div class="col-4">
+                </div>
+                <div class="col-2">
+                    <label class="col-form-label-sm">Total Before Discount</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="Number currency" disabled />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <label class="col-form-label-sm">Owner</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="Owner" />
+                </div>
+                <div class="col-4">
+                </div>
+                <div class="col-1">
+                    <label class="col-form-label-sm">Discount</label>
+                </div>
+                <div class="col-1">
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control form-control-sm" placeholder="" disabled />
+                        <div class="input-group-text">%</div>
+                    </div>
+
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="Number" disabled />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                </div>
+                <div class="col-1">
+                    <label class="col-form-label-sm">Freight</label>
+                </div>
+                <div class="col-1" style="text-align:right">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="" disabled />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                </div>
+                <div class="col-2">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="Check_round">
+                        <label class="form-check-label" for="Check_round">Rounding</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="" disabled />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                </div>
+                <div class="col-2">
+                    <label class="col-form-label-sm">Tax</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="" disabled />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                </div>
+                <div class="col-2">
+                    <label class="col-form-label-sm">Total</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="" disabled />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <label class="col-form-label-sm">Remarks</label>
+                </div>
+                <div class="col-2">
+                    <textarea style="resize:none"></textarea>
+                </div>
+            </div>
+        </div>
+        <footer class="bd-footer bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
+            <div class="container">
+                <button type="submit" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                        </svg>
+                        Save
+                </button>
+
+                <button type="reset" class="btn btn-primary">
+                    Cancel
+                </button>
+            </div>
+        </footer>
+
+
+    </main>
+</form>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
